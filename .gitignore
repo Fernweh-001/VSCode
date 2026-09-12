@@ -1,7 +1,8 @@
 # �������⻷��Ŀ¼ 
 myenv/ 
-ECHO ���ڴ�״̬��
-# ���� Python �����ļ� 
+venv/
+ECHO ڴ״̬
+# Pythonļ 
 __pycache__/ 
 *.py[cod] 
 ECHO ���ڴ�״̬��
@@ -15,3 +16,7 @@ ECHO ���ڴ�״̬��
 # ������־�ļ� 
 *.log 
 myenv/ 
+venv/
+dist/
+*.spec
+*.ico

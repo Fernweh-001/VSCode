@@ -20,37 +20,36 @@ def drawDigit(digit):
     drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)
     drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)
     turtle.left(180)
-    turtle.penup()
     turtle.fd(20)
 
 def drawDate(date):
-    turtle.pencolor('red')
     for i in date:
-        if i == '-':
-            turtle.pencolor('green')
+        if i == '+':
+            turtle.color('green')
             turtle.write('年',font=('Arial',18,'normal'))
             turtle.pencolor('red')
             turtle.fd(40)
-        elif i == '=':
-            turtle.pencolor('green')
+        elif i == '-':
+            turtle.color('green')
             turtle.write('月',font=('Arial',18,'normal'))
             turtle.pencolor('red')
             turtle.fd(40)
-        elif i == '+':
-            turtle.pencolor('green')
+        elif i == '=':
+            turtle.color('green')
             turtle.write('日',font=('Arial',18,'normal'))
             turtle.pencolor('red')
         else:
             drawDigit(eval(i))
 
 def main():
-    turtle.setup(800,350,200,200)
+    turtle.setup(900,400,200,200)
     turtle.penup()
-    turtle.fd(-300)
+    turtle.fd(-400)
     turtle.pensize(5)
-    drawDate(time.strftime("%Y-%m=%d+",time.gmtime()))
+    turtle.pencolor('red')
+    date = time.strftime('%Y+%m-%d=',time.gmtime())
+    drawDate(date)
     turtle.hideturtle()
     turtle.done()
-    
-main()
 
+main()
